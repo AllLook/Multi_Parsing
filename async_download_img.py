@@ -40,8 +40,7 @@ async def async_down_img(urls):
         task = asyncio.ensure_future(download(url))
         tasks.append(task)
     await asyncio.gather(*tasks)
-    loop = asyncio.get_event_loop()
-    loop.run_until_complete()
+  
 
 
 # if __name__ == '__main__':
